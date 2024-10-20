@@ -153,6 +153,24 @@
     </div>
   </section>
 
+
+  <div style="text-align: center; padding: 20px;">
+    <h2>Client Reviews</h3>
+    <p>We are proud that our clients love us! Here are some google reviews from our lovely clients whose satisfaction means the most to us!</p>
+  </div>
+   
+  <div class="glider-contain large-glider">
+    <div class="glider">
+      <img src="images/review1.png" alt="Client review 1">
+      <img src="images/review2.png" alt="Client review 2">
+      <img src="images/review3.png" alt="Client review 3">
+      <img src="images/review4.png" alt="Client review 4">
+      <img src="images/review5.png" alt="Client review 5">
+      <img src="images/review6.png" alt="Client review 6">
+      <img src="images/review7.png" alt="Client review 7">
+    </div>
+  </div>
+
   <footer>
     <p><a href="https://g.co/kgs/E1CjKAd" target="_blank" rel="noopener noreferrer">Shop No. 129, First Floor, Near Hamleys, Ambience Mall, NH-8, Ambience Island, DLF Phase 3, Sector 24, Gurugram, Haryana 122002</a></p>
     <p>Dubai Store: Opening soon!</p>
@@ -181,6 +199,44 @@
           rewind: true
         });
       });
+    });
+
+    window.addEventListener('load', function() {
+    const gliderContainer = document.querySelector('.large-glider .glider');
+    const images = gliderContainer.querySelectorAll('img');
+    let currentIndex = 0;
+    let intervalId;
+
+    // Function to show the current image
+    function showCurrentImage() {
+      images.forEach((img, index) => {
+        img.style.display = index === currentIndex ? 'block' : 'none'; // Show current image, hide others
+      });
+    }
+
+    // Function to move to the next image
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length; // Loop back to first image
+      showCurrentImage();
+    }
+
+    // Start the automatic slideshow
+    function startSlideshow() {
+      intervalId = setInterval(nextImage, 2000); // Change image every 1 second
+    }
+
+    // Stop the automatic slideshow
+    function stopSlideshow() {
+      clearInterval(intervalId);
+    }
+
+    // Show the first image initially
+    showCurrentImage();
+    startSlideshow(); // Start the slideshow
+
+    // Add event listeners for pause on hover
+    gliderContainer.addEventListener('mouseenter', stopSlideshow);
+    gliderContainer.addEventListener('mouseleave', startSlideshow);
     });
   </script>
 </body>
