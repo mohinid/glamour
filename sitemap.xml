@@ -9,7 +9,18 @@
 
 <url>
   <loc>https://glamour-by-abhishek-somani.netlify.app/</loc>
-  <lastmod>2024-09-06T13:48:17+00:00</lastmod>
+  <lastmod>2024-12-17T04:56:23+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://glamour-by-abhishek-somani.netlify.app/glam-artier</loc>
+  <lastmod>2024-12-17T04:56:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://glamour-by-abhishek-somani.netlify.app/meet-the-founders</loc>
+  <lastmod>2024-12-17T04:56:23+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
