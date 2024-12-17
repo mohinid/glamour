@@ -15,7 +15,20 @@
   <!-- Glider.js Script -->
   <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
   <style>
+    /* Section text styling for fade-in */
+      section {
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    section.visible {
+      opacity: 1;
+    }
+
     .glider-contain {
       position: relative;
       width: 100%;
@@ -136,6 +149,15 @@
   </footer>
 
   <script>
+    // Fade-in effect for section text
+    $(window).on('scroll', function() {
+        $('section').each(function() {
+          if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+            $(this).addClass('visible');
+          }
+        });
+      }).trigger('scroll'); // Trigger scroll event on page load
+
     window.addEventListener('load', function() {
       // Initialize Glider.js for all slideshow containers
       document.querySelectorAll('.glider-contain').forEach(container => {
