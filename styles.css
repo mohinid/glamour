@@ -19,6 +19,37 @@ header {
   height: auto;
 }
 
+/* Navigation styling */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #6c5757;
+  padding: 5px 10px; /* Adds padding for better hover effect */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Highlight active link */
+.main-nav ul li a.active {
+  color: #000000;
+  background-color: #dbc4c4; /* Background color for active link */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+.main-nav ul li a:hover {
+  background-color: #dbc4c4; /* Background color change on hover */
+  color: #000000; /* Text color change on hover */
+  border-radius: 5px; /* Optional: adds rounded corners to the hover effect */
+}
+
 header .header-content {
   background-color: rgba(0, 0, 0, 0.8); 
   padding: 20px;
@@ -208,6 +239,11 @@ footer a:hover {
   header h1 {
     font-size: 3em;
   }
+
+  .main-nav ul li a {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px 12px; /* Increase padding for better touch targets */
+  }
   
   header h2 {
     font-size: 2.5em;
@@ -264,6 +300,11 @@ footer a:hover {
   
   header h2 {
     font-size: 1.2em;
+  }
+
+  .main-nav ul li a {
+    font-size: 16px; /* Adjust font size for very small screens */
+    padding: 10px 15px; /* Further increase padding for touch devices */
   }
 
   section {
