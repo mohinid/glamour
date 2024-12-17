@@ -125,72 +125,72 @@
     <div>
   </section>
 
-    <footer>
-      <p>India Store: <a href="https://g.co/kgs/E1CjKAd" target="_blank" rel="noopener noreferrer">Shop No. 129, First Floor, Near Hamleys, Ambience Mall, NH-8, Ambience Island, DLF Phase 3, Sector 24, Gurugram, Haryana 122002</a></p>
-      <p>Dubai Store: Shop No. 242, opp Carrefour, CityLand Mall, Wadi Al Safa 4, Besides Global Village E311, Dubai, UAE</p>
-      <p>Contact Us: 0124-4029129 | +91-99111-66550 | +97-1502415099</p>
-      <p>
-        Follow us on Instagram: 
-        <a href="https://www.instagram.com/glamour_by_abhishek_somani/" target="_blank" rel="noopener noreferrer">glamour_by_abhishek_somani</a>
-      </p>
-    </footer>
+  <footer>
+    <p>India Store: <a href="https://g.co/kgs/E1CjKAd" target="_blank" rel="noopener noreferrer">Shop No. 129, First Floor, Near Hamleys, Ambience Mall, NH-8, Ambience Island, DLF Phase 3, Sector 24, Gurugram, Haryana 122002</a></p>
+    <p>Dubai Store: <a href="https://g.co/kgs/PPFwQBx" target="_blank" rel="noopener noreferrer">Shop No. 242, opp Carrefour, CityLand Mall, Wadi Al Safa 4, Besides Global Village E311, Dubai, UAE</a></p>
+    <p>Contact Us: 0124-4029129 | +91-99111-66550 | +97-1502415099</p>
+    <p>
+      Follow us on Instagram: 
+      <a href="https://www.instagram.com/glamour_by_abhishek_somani/" target="_blank" rel="noopener noreferrer">glamour_by_abhishek_somani</a>
+    </p>
+  </footer>
 
-    <script>
-      window.addEventListener('load', function() {
-        // Initialize Glider.js for all slideshow containers
-        document.querySelectorAll('.glider-contain').forEach(container => {
-          new Glider(container.querySelector('.glider'), {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            draggable: true,
-            dots: container.querySelector('.dots'),
-            arrows: {
-              prev: container.querySelector('.glider-prev'),
-              next: container.querySelector('.glider-next')
-            },
-            scrollLock: true,
-            duration: 0.5,
-            rewind: true
-          });
+  <script>
+    window.addEventListener('load', function() {
+      // Initialize Glider.js for all slideshow containers
+      document.querySelectorAll('.glider-contain').forEach(container => {
+        new Glider(container.querySelector('.glider'), {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          draggable: true,
+          dots: container.querySelector('.dots'),
+          arrows: {
+            prev: container.querySelector('.glider-prev'),
+            next: container.querySelector('.glider-next')
+          },
+          scrollLock: true,
+          duration: 0.5,
+          rewind: true
         });
       });
-  
-      window.addEventListener('load', function() {
-      const gliderContainer = document.querySelector('.large-glider .glider');
-      const images = gliderContainer.querySelectorAll('img');
-      let currentIndex = 0;
-      let intervalId;
-  
-      // Function to show the current image
-      function showCurrentImage() {
-        images.forEach((img, index) => {
-          img.style.display = index === currentIndex ? 'block' : 'none'; // Show current image, hide others
-        });
-      }
-  
-      // Function to move to the next image
-      function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length; // Loop back to first image
-        showCurrentImage();
-      }
-  
-      // Start the automatic slideshow
-      function startSlideshow() {
-        intervalId = setInterval(nextImage, 2000); // Change image every 1 second
-      }
-  
-      // Stop the automatic slideshow
-      function stopSlideshow() {
-        clearInterval(intervalId);
-      }
-  
-      // Show the first image initially
+    });
+
+    window.addEventListener('load', function() {
+    const gliderContainer = document.querySelector('.large-glider .glider');
+    const images = gliderContainer.querySelectorAll('img');
+    let currentIndex = 0;
+    let intervalId;
+
+    // Function to show the current image
+    function showCurrentImage() {
+      images.forEach((img, index) => {
+        img.style.display = index === currentIndex ? 'block' : 'none'; // Show current image, hide others
+      });
+    }
+
+    // Function to move to the next image
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length; // Loop back to first image
       showCurrentImage();
-      startSlideshow(); // Start the slideshow
-  
-      // Add event listeners for pause on hover
-      gliderContainer.addEventListener('mouseenter', stopSlideshow);
-      gliderContainer.addEventListener('mouseleave', startSlideshow);
-      });
-    </script>
+    }
+
+    // Start the automatic slideshow
+    function startSlideshow() {
+      intervalId = setInterval(nextImage, 2000); // Change image every 1 second
+    }
+
+    // Stop the automatic slideshow
+    function stopSlideshow() {
+      clearInterval(intervalId);
+    }
+
+    // Show the first image initially
+    showCurrentImage();
+    startSlideshow(); // Start the slideshow
+
+    // Add event listeners for pause on hover
+    gliderContainer.addEventListener('mouseenter', stopSlideshow);
+    gliderContainer.addEventListener('mouseleave', startSlideshow);
+    });
+  </script>
 </body>
