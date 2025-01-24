@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e5ded9;
+}
+
+header {
+  background-image: url('images/dubai-store.png');
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  height: auto;
+}
+
+/* Navigation styling */
+.main-nav ul {
+  background-color: rgba(219, 196, 196, 0.3);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.main-nav ul li {
+  display: flex;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #6c5757;
+  padding: 10px; /* Adds padding for better hover effect */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Highlight active link */
+.main-nav ul li a.active {
+  color: #000000;
+  background-color: #dbc4c4; /* Background color for active link */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+.main-nav ul li a:hover {
+  background-color: #dbc4c4; /* Background color change on hover */
+  color: #000000; /* Text color change on hover */
+  border-radius: 5px; /* Optional: adds rounded corners to the hover effect */
+}
+
+header .header-content {
+  background-color: rgba(0, 0, 0, 0.8); 
+  padding: 20px;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5em;
+  margin: 0;
+}
+
+header h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.75em;
+  color: #ffffff;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  margin: 20px;
+  border: 10px;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+section img{
+  width: 100%; /* Make sure the image is flexible */
+  height: auto;
+  margin-right: 20px;
+  align-content: center;
+}
+
+section div {
+  width: 50%; /* Allow content to take flexible space */
+  padding: 20px;
+  text-align: center;
+}
+
+section h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3em;
+  color: #333;
+}
+
+section:nth-child(odd) {
+  flex-direction: row-reverse;
+  background-color: #ded3cb;
+}
+
+.large-glider {
+  width: 100%;
+  padding: 20px;
+  display: inline;
+  position: relative
+}
+
+.large-glider .glider {
+  width: 700px;
+  height: 500px; /* Adjust the height as needed */
+  align-items: center;
+  overflow: hidden;
+}
+
+.large-glider img {
+  object-fit: cover; /* Make sure the images cover the entire container without stretching */
+  display: block;
+}
+
+.large-glider .glider-prev,
+.large-glider .glider-next {
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  z-index: 10;
+  margin-left: 50px;
+}
+
+.large-glider .glider-next {
+  left: 1100px;
+}
+
+.large-glider .dots {
+  display: flex;
+  justify-content: center;
+}
+
+.large-glider .dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.large-glider .dots button.active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  align-items: center;
+  align-content: center;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide img {
+  width: 70%;
+  height: auto;
+  padding-right: 20px;
+}
+
+.nav-button {
+  background-color: rgba(42, 40, 40, 0.3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+footer {
+  background-color: #333;;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+footer a {
+  color: rgb(90, 90, 249);
+  text-decoration: none; /* Remove underline from link */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  header {
+    height: auto;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 3em;
+  }
+
+  .main-nav ul li a {
+    font-size: 10px; /* Adjust font size for smaller screens */
+    padding: 8px 12px; /* Increase padding for better touch targets */
+  }
+  
+  header h2 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    align-content: center;
+  }
+  
+  section img {
+    padding: 20px;
+    width: 100%;
+    margin: 0 0 20px 0;
+    align-items: center;
+    margin-right: 40px;
+  }
+  
+  section div {
+    width: 100%;
+  }
+
+  .glider-prev,
+  .glider-next {
+    font-size: 1em;
+    padding: 8px;
+  }
+  
+  .glider-prev {
+    left: 5px;
+  }
+
+  .glider-next {
+    right: 5px;
+    margin-left: 10px;
+  }
+
+  .large-glider .glider {
+    width: 300px;
+    height: 200px; /* Adjust the height as needed */
+    align-items: center;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.9em;
+  }
+  
+  header h2 {
+    font-size: 1.2em;
+  }
+
+  .main-nav ul li a {
+    font-size: 10px; /* Adjust font size for very small screens */
+    padding: 10px 15px; /* Further increase padding for touch devices */
+  }
+
+  section {
+    padding: 20px;
+    margin: 0 10px;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+    align-content: center;
+  }
+
+  .glider-prev,
+  .glider-next {
+    font-size: 1.2em;
+    padding: 8px;
+  }
+  
+  .glider-prev {
+    left: 5px;
+  }
+
+  .glider-next {
+    right: 5px;
+    margin-left: 10px;
+  }
+
+  .large-glider .glider {
+    width: 400px;
+    height: 300px; /* Adjust the height as needed */
+    align-items: center;
+    overflow: hidden;
+  }
+}
