@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="glamour founders, follow">
+  <title>Glamour - Meet the Founders</title>
+  <meta name="Glamour founders" content="glamour founders">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Glider.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+
+  <!-- Glider.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Section text styling for fade-in */
+    section {
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    section.visible {
+      opacity: 1;
+    }
+
+    section p {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    }
+
+    section.visible p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section.visible p {
+      transition-delay: 1s;
+    }
+
+    /* Section images initial state */
+    section img {
+      opacity: 0;
+      transform: scale(0.9); /* Slightly scaled down */
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+
+    section img.visible {
+      opacity: 1;
+      transform: scale(1); /* Original size */
+    }
+
+    .glider-contain {
+      position: relative;
+      width: 100%;
+      max-width: 400px; /* Adjust as needed */
+      margin: 0 auto;
+      padding-right: 55px;
+    }
+
+    .glider {
+      overflow: hidden; /* Ensure no overflow of slides */
+      width: 70%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header-content">
+    <h1>Our Founders</h1>
+    <h2>Our Story</h2>
+  </header>
+
+  <nav  class="main-nav">
+    <ul>
+      <li><a href="index.html">Glamour India</a></li>
+      <li><a href="glam-artier.html" >Glam Artier Dubai</a></li>
+      <li><a href="meet-the-founders.html" class="active">Meet the Founders</a></li>
+    </ul>
+  </nav>
+
+  <section id="abhishek-somani">
+    <div>
+      <h3>Meet The Founder</h3>
+      <h2>Abhishek Somani</h2>
+      <p><b>Abhishek Somani</b>, born in Jaipur to a humble family, started working in the jewelry business at the age of 15. Passionate about gemstones, designer jewelry, and uncompromising quality, he quickly climbed the ranks and became the Sales Head for Malaysia in 1998, driven by positive customer feedback. Seeking bigger opportunities, he moved to the US to serve a larger clientele.</p>
+      <p>Abhishek is an MBA, specializing in International Trade, with deep knowledge of gemstones and expertise in unique designing and manufacturing. His strategic vision and leadership have been instrumental in achieving global expansion for the enterprise. With a strong focus on innovation and quality, he has successfully positioned the brand as a trusted name in the international jewelry market, while continuing to explore new horizons in business growth and development in the Gulf region and beyond.</p>
+      <p>Married to <b>Anjana Somani</b>, she now helps with retail sales and client relationships, while Abhishek oversees export trades, manufacturing, and business expansion. Together, they form a dedicated team focused on the success of their jewelry enterprise.</p>
+    </div>
+    <div class="glider-contain">
+      <div class="glider">
+        <img src="images/abhishek.jpeg" alt="Abhishek Somani" loading="lazy">
+      </div>
+    <div>
+  </section>
+
+  
+  <section id="anjana-somani">
+    <div>
+      <h3>Meet Anjana Somani | Co-Founder</h3>
+      <p>Anjana Somani, co-founder of Glamour Art and Jewerly and wife of Abhishek Somani, brings a remarkable blend of expertise and experience to the table. With a background as a Lawyer, MBA in Human Resources and Marketing, Professor, Author, and media Representative, she has immense exposure to various industries. Since 2009, Anjana has accumulated over 15 years of experience in jewelry retail, sales, marketing, and public relations, playing a pivotal role in crafting stunning collections and building customer relationships. Her leadership at Glamour and Glam Artier reflects a deep commitment to elegance and artistry in jewelry design.</p>
+    </div>
+    <div class="glider-contain">
+      <div class="glider">
+        <img src="images/abhishek.png" alt="Anjana Somani" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>India Store: <a href="https://g.co/kgs/E1CjKAd" target="_blank" rel="noopener noreferrer">Shop No. 129, First Floor, Near Hamleys, Ambience Mall, NH-8, Ambience Island, DLF Phase 3, Sector 24, Gurugram, Haryana 122002</a></p>
+    <p>Dubai Store: <a href="https://g.co/kgs/PPFwQBx" target="_blank" rel="noopener noreferrer">Shop No. 242, opp Carrefour, CityLand Mall, Wadi Al Safa 4, Besides Global Village E311, Dubai, UAE</a></p>
+    <p>Contact Us: 0124-4029129 | +91-99111-66550 | +97-1502415099</p>
+    <p>
+      Follow us on Instagram: 
+      <a href="https://www.instagram.com/glamour_by_abhishek_somani/" target="_blank" rel="noopener noreferrer">glamour_by_abhishek_somani</a>
+    </p>
+  </footer>
+
+  <script>
+      // Fade-in effect for section text
+      $(window).on('scroll', function() {
+        $('section').each(function() {
+          if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+            $(this).addClass('visible');
+
+            // Check for images inside the section and add the 'visible' class
+            $(this).find('img').each(function() {
+              if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+                $(this).addClass('visible');
+              }
+            });
+
+            $(this).find('p').addClass('visible'); // Add 'visible' class to child <p> tags
+          }
+        });
+      }).trigger('scroll'); // Trigger scroll event on page load
+  </script>
+</body>

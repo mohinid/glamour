@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="glam-artier, follow">
+  <title>Glam Artier, Dubai</title>
+  <meta name="Glam Artier Dubai" content="Glam Artier Dubai">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Glider.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+
+  <!-- Glider.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <style>
+    /* Section text styling for fade-in */
+      section {
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    section.visible {
+      opacity: 1;
+    }
+
+    .glider-contain {
+      position: relative;
+      width: 100%;
+      max-width: 400px; /* Adjust as needed */
+      margin: 0 auto;
+    }
+
+    .glider {
+      overflow: hidden; /* Ensure no overflow of slides */
+      width: 70%;
+    }
+
+    .glider-prev,
+    .glider-next {
+      background-color: rgba(80, 76, 76, 0.3);
+      color: white;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2em;
+      border-radius: 50%;
+      padding: 10px;
+      z-index: 10; /* Ensure buttons are above other content */
+    }
+
+    .glider-prev {
+      left: 10px; /* Adjust as needed */
+    }
+
+    .glider-next {
+      right: 10px; /* Adjust as needed */
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 5px;
+    }
+
+    .dots button {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: rgba(0, 0, 0, 0.3);
+      border: none;
+      cursor: pointer;
+    }
+
+    .dots button.active {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header-content">
+    <h1>Glam Artier</h1>
+    <h2>Dubai, UAE</h2>
+  </header>
+
+  <nav  class="main-nav">
+    <ul>
+      <li><a href="index.html">Glamour India</a></li>
+      <li><a href="glam-artier.html"  class="active">Glam Artier Dubai</a></li>
+      <li><a href="meet-the-founders.html">Meet the Founders</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div>
+      <h3>Glam Artier, Dubai UAE</h3>
+      <p>Discover a magnificent assortment of sophisticated jewelry, featuring exquisite gold, diamond, and silver pieces adorned with precious and semi-precious gemstones. We have started our new store Glam Artier in Dubai, UAE under our parent company Glamour Art and Jewels which is located in Ambience Mall, Gurugram, India, showcasing the most alluring designs and craft!</p>
+    </div>
+    <div class="glider-contain">
+      <div class="glider">
+        <img src="images/artier1.jpeg" alt="Glam Artier 1">
+        <img src="images/artier2.jpeg" alt="Glam Artier 2">
+        <img src="images/artier3.jpeg" alt="Glam Artier 3">
+        <img src="images/artier4.jpeg" alt="Glam Artier 4">
+        <img src="images/glam-artier-card.jpeg" alt="Glam Artier card">
+      </div>
+
+       <!-- Glider navigation buttons -->
+       <button class="glider-prev">&#10094;</button>
+       <button class="glider-next">&#10095;</button>
+ 
+       <!-- Glider dots for pagination -->
+       <div role="tablist" class="dots"></div>
+    <div>
+  </section>
+
+  <section>
+    <div>
+      <h3>Our Story</h3>
+      <p>After our decades long story of success and unwavering customer satisfaction in India, we are thrilled to announce the opening of our new store in the <a href="https://g.co/kgs/h9KmwU3" target="_blank" rel="noopener noreferrer">City Land Mall</a>, World's first 1.2 Million Sq. Ft. Nature Inspired retails and entertainment destination located besides Global Village on Sheikh Mohammed Bin Zayed Road(E311) in the beautiful city of Dubai, UAE.
+        Our new branch Glam Artier, showcases a glamorous, dazzling and visually striking collection with a strong emphasis on artistic detailing presented in the most breathtaking setting!!
+        Glam Artier is founded by <a href="meet-the-founders.html" target="_blank" rel="noopener noreferrer">Abhishek Somani</a> and being led by his wife <a href="meet-the-founders.html" target="_blank" rel="noopener noreferrer">Anjana Somani</a>, both exuding same passion and attention to detail that our customers have always seem to love.
+      </p>
+    </div>
+    <div class="glider-contain">
+      <div class="glider">
+        <img src="images/ind-dubai.jpeg" alt="dubai">
+      </div>
+    <div>
+  </section>
+
+  <footer>
+    <p>India Store: <a href="https://g.co/kgs/E1CjKAd" target="_blank" rel="noopener noreferrer">Shop No. 129, First Floor, Near Hamleys, Ambience Mall, NH-8, Ambience Island, DLF Phase 3, Sector 24, Gurugram, Haryana 122002</a></p>
+    <p>Dubai Store: <a href="https://g.co/kgs/PPFwQBx" target="_blank" rel="noopener noreferrer">Shop No. 242, opp Carrefour, CityLand Mall, Wadi Al Safa 4, Besides Global Village E311, Dubai, UAE</a></p>
+    <p>Contact Us: 0124-4029129 | +91-99111-66550 | +97-1502415099</p>
+    <p>
+      Follow us on Instagram: 
+      <a href="https://www.instagram.com/glamour_by_abhishek_somani/" target="_blank" rel="noopener noreferrer">glamour_by_abhishek_somani</a>
+    </p>
+  </footer>
+
+  <script>
+    // Fade-in effect for section text
+    $(window).on('scroll', function() {
+        $('section').each(function() {
+          if ($(this).offset().top < $(window).scrollTop() + $(window).height()) {
+            $(this).addClass('visible');
+          }
+        });
+      }).trigger('scroll'); // Trigger scroll event on page load
+
+    window.addEventListener('load', function() {
+      // Initialize Glider.js for all slideshow containers
+      document.querySelectorAll('.glider-contain').forEach(container => {
+        new Glider(container.querySelector('.glider'), {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          draggable: true,
+          dots: container.querySelector('.dots'),
+          arrows: {
+            prev: container.querySelector('.glider-prev'),
+            next: container.querySelector('.glider-next')
+          },
+          scrollLock: true,
+          duration: 0.5,
+          rewind: true
+        });
+      });
+    });
+
+    window.addEventListener('load', function() {
+    const gliderContainer = document.querySelector('.large-glider .glider');
+    const images = gliderContainer.querySelectorAll('img');
+    let currentIndex = 0;
+    let intervalId;
+
+    // Function to show the current image
+    function showCurrentImage() {
+      images.forEach((img, index) => {
+        img.style.display = index === currentIndex ? 'block' : 'none'; // Show current image, hide others
+      });
+    }
+
+    // Function to move to the next image
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length; // Loop back to first image
+      showCurrentImage();
+    }
+
+    // Start the automatic slideshow
+    function startSlideshow() {
+      intervalId = setInterval(nextImage, 2000); // Change image every 1 second
+    }
+
+    // Stop the automatic slideshow
+    function stopSlideshow() {
+      clearInterval(intervalId);
+    }
+
+    // Show the first image initially
+    showCurrentImage();
+    startSlideshow(); // Start the slideshow
+
+    // Add event listeners for pause on hover
+    gliderContainer.addEventListener('mouseenter', stopSlideshow);
+    gliderContainer.addEventListener('mouseleave', startSlideshow);
+    });
+  </script>
+</body>
